@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SportFit | Ropa Deportiva Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="img/logo.jfif" alt="SPORTFIT Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="btn-comprar">Comprar</button>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge">NUEVA COLECCIÓN 2026</span>
+                <h1>Entrená con tu<br> mejor versión.</h1>
+                <p>Ropa deportiva diseñada para el rendimiento. Estilo, comodidad y tecnología.</p>
+                <div class="hero-btns">
+                    <a href="#productos" class="btn-primario">Ver productos &rarr;</a>
+                    <a href="#resenas" class="btn-secundario">Ver reseñas</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="product-container">
+                <article class="card">
+                    <img src="img/remera.jfif" alt="Remera Performance Dry">
+                    <h3>Remera Performance</h3>
+                    <p class="precio">$24.990</p>
+                    <a href="#contacto" class="btn-card">Comprar</a>
+                </article>
+                <article class="card">
+                    <img src="img/shorts.jfif" alt="Short Training Flex">
+                    <h3>Short Training</h3>
+                    <p class="precio">$18.990</p>
+                    <a href="#contacto" class="btn-card">Comprar</a>
+                </article>
+                <article class="card">
+                    <img src="img/zapatillas.jfif" alt="Zapatillas Velocity Pro">
+                    <h3>Zapatillas Velocity</h3>
+                    <p class="precio">$89.990</p>
+                    <a href="#contacto" class="btn-card">Comprar</a>
+                </article>
+                <article class="card">
+                    <img src="img/campera.jfif" alt="Campera Athletic">
+                    <h3>Campera Athletic</h3>
+                    <p class="precio">$39.990</p>
+                    <a href="#contacto" class="btn-card">Comprar</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="multimedia">
+            <h2>Movete con nosotros</h2>
+            <p class="multimedia-sub">Mirá cómo nuestra comunidad lleva el rendimiento al siguiente nivel.</p>
+            <div class="video-wrapper">
+                <iframe
+                    width="100%"
+                    height="450"
+                    src="https://www.youtube.com/embed/VEfDcyDFybM"
+                    title="Workout video SportFit"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="resenas" class="resenas">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="resenas-grid">
+                <article class="review-item">
+                    <p>"La remera Performance es increíble. Transpira perfecto y no pierde la forma."</p>
+                    <span class="review-autor">— Lucas M.</span>
+                    <span class="review-stars">★★★★★</span>
+                </article>
+                <article class="review-item">
+                    <p>"Las zapatillas Velocity llegaron en 24 horas y son exactamente lo que esperaba."</p>
+                    <span class="review-autor">— Valentina R.</span>
+                    <span class="review-stars">★★★★★</span>
+                </article>
+                <article class="review-item">
+                    <p>"Calidad premium a un precio muy accesible. Ya compré tres prendas distintas."</p>
+                    <span class="review-autor">— Matías G.</span>
+                    <span class="review-stars">★★★★☆</span>
+                </article>
+                <article class="review-item">
+                    <p>"El short Training es cómodo para correr y también para el gym. Lo recomiendo."</p>
+                    <span class="review-autor">— Sofía P.</span>
+                    <span class="review-stars">★★★★★</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>¿Hablamos?</h2>
+            <p class="contacto-sub">Escribinos y te respondemos a la brevedad. Estamos para ayudarte.</p>
+
+            <form
+                class="form-contacto"
+                action="https://formspree.io/f/xojyyrgb"
+                method="POST">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="tu@email.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+
+                <button type="submit">Enviar mensaje &#9658;</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <img src="img/logo.jfif" alt="SportFit Logo" class="footer-logo">
+                <strong>SPORTFIT</strong>
+                <p>Ropa deportiva premium para atletas que no se conforman. Hecha para durar.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>hola@sportfit.com</p>
+                <p>+54 11 5555-1234</p>
+                <p>Buenos Aires, AR</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 SportFit. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
