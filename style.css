@@ -38,7 +38,7 @@ h2::after {
     margin: 10px auto 0;
 }
 
-
+/*HEADER*/
 header {
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
@@ -87,7 +87,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
-
+/*BOTTON*/
 
 .btn-comprar,
 .btn-primario,
@@ -178,7 +178,7 @@ nav ul li a:hover::after {
     gap: 20px;
 }
 
-
+/*CARDS*/
 .card {
     background: #fff;
     padding: 1rem;
@@ -221,7 +221,7 @@ nav ul li a:hover::after {
     margin-bottom: 1rem;
 }
 
-
+/*MULTIMEDIA*/
 .multimedia {
     background: #0a0a0a;
     padding: 4rem 5%;
@@ -246,7 +246,7 @@ nav ul li a:hover::after {
     border: 2px solid rgba(0, 255, 136, 0.3);
 }
 
-
+/*RESEÑA*/
 .resenas {
     padding: 4rem 5%;
     background: #f4f4f4;
@@ -300,7 +300,7 @@ nav ul li a:hover::after {
     color: rgba(255, 255, 255, 0.55);
     margin-bottom: 2rem;
 }
-
+/*FORMS*/
 .form-contacto {
     display: flex;
     flex-direction: column;
@@ -345,7 +345,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-
+/*FOOTER*/
 footer {
     background: #111;
     color: #fff;
@@ -417,7 +417,7 @@ footer {
     padding-top: 1.5rem;
 }
 
-
+/*MEDIA QUERIES*/
 @media (max-width: 768px) {
     header {
         flex-direction: column;
