@@ -48,8 +48,19 @@ function renderizarProductos(productos) {
     ];
 
     productos.forEach(function (producto, index) {
-        // Multiplicamos el precio por un valor fijo (450) para simular precios reales locales en Pesos Argentinos
-        const precioLocal = Math.round(producto.price * 450);
+        // Asignamos precios fijos en pesos argentinos basados en tu diseño original
+        let precioLocal = 0;
+        if (index === 0) {
+            precioLocal = 24990;  // Remera Performance
+        } else if (index === 1) {
+            precioLocal = 18990;  // Short Training
+        } else if (index === 2) {
+            precioLocal = 89990;  // Zapatillas Velocity
+        } else if (index === 3) {
+            precioLocal = 39990;  // Campera Athletic
+        } else {
+            precioLocal = Math.round(producto.price * 450); // Backup por si hay más de 4 productos
+        }
         
         // Mapeamos cada producto retornado por la API a una de tus imágenes locales según su posición (índice)
         const imagenAMostrar = imagenesLocales[index % imagenesLocales.length];
