@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportFit | Ropa Deportiva Premium</title>
+
+    <link rel="icon" type="image/png" href="img/logo16x16.png">
+    
+    <!-- Metaetiquetas de SEO -->
+    <meta name="description" content="SportFit es tu tienda online de indumentaria y ropa deportiva premium. Encontrá las mejores remeras, shorts y calzado para tu entrenamiento y máximo rendimiento.">
+    <meta name="keywords" content="ropa deportiva, e-commerce deportivo, indumentaria fitness, remeras running, shorts training, zapatillas running, SportFit, entrenamiento">
+    <meta name="author" content="SportFit Team">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Estilos Personalizados (Cargado después de Bootstrap para asegurar cascada correcta) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.jfif" alt="Logo oficial de SportFit">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón del carrito con contador integrado que abre el Modal de Bootstrap -->
+        <button id="btn-carrito" class="btn-comprar d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#carritoModal" aria-label="Abrir carrito de compras">
+            <span>🛒</span>
+            <span class="d-none d-sm-inline">Carrito</span>
+            <span id="contador-carrito" class="badge bg-dark text-white rounded-pill ms-1">0</span>
+        </button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- SECCIÓN INICIO / HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge bg-custom-green">NUEVA COLECCIÓN 2026</span>
+                <h1>Entrená con tu<br> mejor versión.</h1>
+                <p>Ropa deportiva diseñada para el rendimiento. Estilo, comodidad y tecnología de punta.</p>
+                <div class="hero-btns">
+                    <a href="#productos" class="btn-primario">Ver productos &rarr;</a>
+                    <a href="#resenas" class="btn-secundario">Ver reseñas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS -->
+        <section id="productos" class="productos">
+            <h2>Nuestros Productos</h2>
+            
+            <!-- Contenedor dinámico organizado con Flexbox de Bootstrap -->
+            <div id="product-container" class="product-container d-flex flex-wrap justify-content-center gap-4">
+                <div class="text-center w-100 py-5">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Cargando productos...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MULTIMEDIA -->
+        <section class="multimedia">
+            <h2>Movete con nosotros</h2>
+            <p class="multimedia-sub">Mirá cómo nuestra comunidad lleva el rendimiento al siguiente nivel.</p>
+            <div class="video-wrapper">
+                <iframe
+                    width="100%"
+                    height="450"
+                    src="https://www.youtube.com/embed/VEfDcyDFybM"
+                    title="Video motivacional de entrenamiento SportFit"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- SECCIÓN RESEÑAS -->
+        <section id="resenas" class="resenas">
+            <h2>Lo que dicen nuestros clientes</h2>
+            
+            <!-- Organizado con CSS Grid -->
+            <div class="resenas-grid">
+                <article class="review-item">
+                    <p>"La remera Performance es increíble. Transpira perfecto y no pierde la forma."</p>
+                    <span class="review-autor">— Lucas M.</span>
+                    <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+                </article>
+                <article class="review-item">
+                    <p>"Las zapatillas Velocity llegaron en 24 horas y son exactamente lo que esperaba."</p>
+                    <span class="review-autor">— Valentina R.</span>
+                    <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+                </article>
+                <article class="review-item">
+                    <p>"Calidad premium a un precio muy accesible. Ya compré tres prendas distintas."</p>
+                    <span class="review-autor">— Matías G.</span>
+                    <span class="review-stars" aria-label="4 estrellas">★★★★☆</span>
+                </article>
+                <article class="review-item">
+                    <p>"El short Training es cómodo para correr y también para el gym. Lo recomiendo."</p>
+                    <span class="review-autor">— Sofía P.</span>
+                    <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="contacto">
+            <h2>¿Hablamos?</h2>
+            <p class="contacto-sub">Escribinos y te respondemos a la brevedad. Estamos para ayudarte.</p>
+
+            <form
+                id="form-contacto"
+                class="form-contacto"
+                action="https://formspree.io/f/xojyyrgb"
+                method="POST">
+                
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="tu@email.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+
+                <button type="submit">Enviar mensaje &#9658;</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <img src="img/logo.jfif" alt="Logo de SportFit en pie de página" class="footer-logo">
+                <strong>SPORTFIT</strong>
+                <p>Ropa deportiva premium para atletas que no se conforman. Hecha para durar.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>hola@sportfit.com</p>
+                <p>+54 11 5555-1234</p>
+                <p>Buenos Aires, AR</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 SportFit. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- MODAL DE BOOTSTRAP 5 PARA EL CARRITO DE COMPRAS -->
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="carritoModalLabel" style="font-family: 'Oswald', sans-serif;">🛒 MI CARRITO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenedor donde se insertará la tabla dinámica -->
+                    <div id="carrito-items">
+                        <!-- Inyección vía Javascript -->
+                    </div>
+                    
+                    <!-- Fila de totalizador -->
+                    <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-secondary">
+                        <span class="fs-5 text-secondary">Total Compra:</span>
+                        <span class="fs-3 fw-bold text-success">$<span id="total-carrito">0</span></span>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" id="btn-finalizar-compra" class="btn-comprar">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE COMPRA EXITOSA (DISEÑO PERSONALIZADO SEGÚN EJEMPLO) -->
+    <div class="modal fade" id="compraExitosaModal" tabindex="-1" aria-labelledby="compraExitosaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-light text-dark border-0 shadow-lg text-center p-4">
+                <div class="modal-body">
+                    <!-- Icono verde de éxito animado -->
+                    <div class="d-inline-flex align-items-center justify-content-center bg-success text-white rounded-circle mb-3 shadow" style="width: 70px; height: 70px; font-size: 2.2rem; background: linear-gradient(135deg, #28a745, #218838);">
+                        ✓
+                    </div>
+                    <h3 class="modal-title mb-2" id="compraExitosaModalLabel" style="font-family: 'Oswald', sans-serif; font-weight: bold; text-transform: uppercase;">
+                        SportFit: Compra exitosa!
+                    </h3>
+                    <p class="text-secondary mb-4" style="font-size: 0.95rem; line-height: 1.5;">
+                        Gracias por su pedido<br>
+                        <span class="d-block mt-2 fw-bold text-dark" style="font-size: 0.9rem;">
+                            ¡Muchas gracias por elegir SportFit! Tu compra se ha simulado con éxito y tu pedido está siendo procesado.
+                        </span>
+                    </p>
+                    
+                    <!-- Dibujo SVG de Cajas de Entrega tipo Isométrico con Marca SportFit -->
+                    <div class="mb-4 d-flex justify-content-center">
+                        <svg width="120" height="95" viewBox="0 0 120 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Box Left -->
+                            <path d="M20 65 L45 55 L70 65 L45 75 Z" fill="#F4B400"/>
+                            <path d="M20 65 L45 75 L45 92 L20 82 Z" fill="#E28C07"/>
+                            <path d="M45 75 L70 65 L70 82 L45 92 Z" fill="#C67605"/>
+                            
+                            <!-- Box Right -->
+                            <path d="M50 65 L75 55 L100 65 L75 75 Z" fill="#F4B400"/>
+                            <path d="M50 65 L75 75 L75 92 L50 82 Z" fill="#E28C07"/>
+                            <path d="M75 75 L100 65 L100 82 L75 92 Z" fill="#C67605"/>
+                            
+                            <!-- Box Center Top -->
+                            <path d="M35 30 L60 20 L85 30 L60 40 Z" fill="#FFC107"/>
+                            <path d="M35 30 L60 40 L60 60 L35 50 Z" fill="#FFA000"/>
+                            <path d="M60 40 L85 30 L85 50 L60 60 Z" fill="#E69100"/>
+                            
+                            <!-- Small SportFit Letter Logo on Front Box -->
+                            <text x="44" y="49" fill="#000000" font-family="'Oswald', sans-serif" font-weight="bold" font-size="7" transform="rotate(22 44 49)">S</text>
+                            <text x="49" y="51" fill="#CC0000" font-family="'Inter', sans-serif" font-weight="bold" font-size="3.5" transform="rotate(22 49 51)">SportFit</text>
+                        </svg>
+                    </div>
+                    
+                    <button type="button" class="btn btn-dark w-100 py-2 fw-bold" data-bs-dismiss="modal" style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle (incluye Popper.js para modales y dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Lógica de la aplicación -->
+    <script src="script.js"></script>
+</body>
+</html>

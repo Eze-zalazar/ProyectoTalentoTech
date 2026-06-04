@@ -476,3 +476,123 @@ footer {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS PARA EL MODAL DE CARRITO (BOOTSTRAP INTEGRATION)
+   ========================================================================== */
+
+#carritoModal .modal-content {
+    background-color: #111 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+#carritoModal .modal-header,
+#carritoModal .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#carritoModal .table {
+    color: #f0f0f0 !important;
+}
+
+#carritoModal .table th {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+#carritoModal .table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+    color: #f0f0f0 !important;
+}
+
+.bg-custom-green {
+    background-color: #00ff88 !important;
+    color: #000 !important;
+}
+
+/* Botones de cantidad (+ y -) */
+.btn-qty {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    width: 26px;
+    height: 26px;
+    padding: 0 !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-qty:hover {
+    background-color: #00ff88 !important;
+    color: #000 !important;
+    border-color: #00ff88 !important;
+}
+
+/* Botón eliminar */
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+    padding: 2px 6px;
+}
+
+.btn-delete:hover {
+    transform: scale(1.15);
+    color: #ff3333;
+}
+
+/* Ajustes adicionales del Header para compatibilidad */
+header #btn-carrito {
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+#contador-carrito {
+    background-color: #000 !important;
+    color: #00ff88 !important;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+/* Notificación Toast del Carrito */
+.toast-carrito {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.toast-carrito.show {
+    opacity: 1;
+    transform: translateY(0);
+}
