@@ -596,3 +596,21 @@ header #btn-carrito {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Media query para pantallas pequeñas: Ajustar tabla del carrito */
+@media (max-width: 576px) {
+    #carritoModal .table th,
+    #carritoModal .table td {
+        padding: 8px 4px !important;
+        font-size: 0.8rem;
+    }
+    #carritoModal .btn-qty {
+        width: 22px;
+        height: 22px;
+        font-size: 0.75rem;
+    }
+    #carritoModal .table td img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
