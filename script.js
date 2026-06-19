@@ -202,18 +202,19 @@ function renderizarCarritoModal() {
 
     // Estructura de la tabla responsiva
     let tablaHTML = `
-        <table class="table table-dark align-middle">
-            <thead>
-                <tr>
-                    <th scope="col">Prod.</th>
-                    <th scope="col">Detalle</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col" class="text-center">Cant.</th>
-                    <th scope="col">Subtotal</th>
-                    <th scope="col" class="text-center">Acción</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="table-responsive">
+            <table class="table table-dark align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Prod.</th>
+                        <th scope="col">Detalle</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col" class="text-center">Cant.</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Subtotal</th>
+                        <th scope="col" class="text-center">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
     `;
 
     let totalAcumulado = 0;
@@ -241,7 +242,7 @@ function renderizarCarritoModal() {
                         <button class="btn-qty" onclick="cambiarCantidad('${item.id}', 1)">+</button>
                     </div>
                 </td>
-                <td class="fw-semibold">
+                <td class="fw-semibold d-none d-sm-table-cell">
                     $${subtotal.toLocaleString('es-AR')}
                 </td>
                 <td class="text-center">
@@ -254,8 +255,9 @@ function renderizarCarritoModal() {
     });
 
     tablaHTML += `
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     `;
 
     // Inyectamos la tabla armada en el DOM
